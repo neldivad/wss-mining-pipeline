@@ -23,16 +23,16 @@ At the first capture (2 September 2026):
 Across the state there are 400 operating mines and 406 mothballed ones. This
 repository exists to record what happens to those numbers next.
 
-## The two facts kept
+## The fact kept
 
 | metric | entity | why it is here |
 | --- | --- | --- |
 | `stage` | `site:wa:<site_code>` | Operating / Care and Maintenance / Proposed / Under Development / Shut / Undeveloped — overwritten in place |
-| `holder` | `tenement:wa:<tenid>` | who holds live ground; consolidation is invisible after the fact |
 
 `commodity` and `site_type` ride alongside because a stage change is unreadable
-without knowing what the site produces and whether it is a mine at all. `area`
-accompanies each tenement so ground can be measured in hectares, not counts.
+without knowing what the site produces and whether it is a mine at all. Site
+coordinates go into the raw archive but not the observation table: they exist
+only to make a later spatial join to tenements possible.
 
 Everything is long format: one row per `entity_id` × `metric` × `observed_at`.
 `observed_at` is the **service's own extract stamp**, not the fetch time, so a
@@ -49,6 +49,19 @@ mirrored. Brazil's 269,427 active processes *should* be here and cannot be yet.
 Both are written up: [what we do not capture](docs/what-we-do-not-capture.md)
 and [pagination](docs/pagination.md).
 
+**Ownership is captured by nobody here either, and that is a decision.** The
+tenement source is written and paused: 40% of holders are named individuals,
+and this fleet declares `personal_data: none`. See
+[ownership is blocked](docs/ownership-is-blocked.md).
+
+## What it is for
+
+[Research questions](docs/research-questions.md) — the six questions this
+archive can answer, the one it cannot answer without a price series, and the
+two it can never answer (there is no reason code for a stage change, and no
+production data). It also records who already sells this and what is actually
+uncovered.
+
 ## Cadence, and why monthly
 
 Care-and-maintenance decisions are board decisions measured in quarters.
@@ -57,7 +70,12 @@ extra resolution. One pass is 11 polite GETs against a single WA government
 host, which is also why `SHARDS: "1"` — sharding would put several runners on
 one server at once, and the per-host delay is per process.
 
-Roughly 77 MB of raw archive and 195 MB of derived table per year.
+Roughly 12 MB of raw archive and 36 MB of derived table per year with the
+tenement source paused. Each capture is verified by a truncation gate rather
+than trusted — see [pagination](docs/pagination.md).
+
+`derive` runs the day after and writes **what moved** into the workflow
+summary, so a month with no movement is visible as a no-op rather than silence.
 
 ## How it runs
 

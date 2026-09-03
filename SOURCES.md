@@ -11,7 +11,7 @@ timestamp and a SHA-256 of exactly what came back.
 | source | publisher | cadence | status | last captured |
 | --- | --- | --- | --- | --- |
 | `wa.minedex.sites` | DMIRS Western Australia | monthly | active | 2026-09-03 |
-| `wa.tenements.live` | DMIRS Western Australia | monthly | active | 2026-09-03 |
+| `wa.tenements.live` | DMIRS Western Australia | monthly | paused | — |
 
 ## Each source in full
 
@@ -21,9 +21,9 @@ timestamp and a SHA-256 of exactly what came back.
 
 MINEDEX mine sites. The perishable fact is site_stage — Operating, Care and Maintenance, Proposed, Under Development, Shut, Undeveloped. When a mine is mothballed the previous value is overwritten and nothing records when it moved. Idled capacity restarts in months, so the transition date is the supply signal. target_com carries the commodity, which the tenement layers do not.
 
-- <https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=gid%3C11229500&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Cextract_da&returnGeometry=false&f=json>
-- <https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=gid%3E%3D11229500+AND+gid%3C11232900&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Cextract_da&returnGeometry=false&f=json>
-- <https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=gid%3E%3D11232900&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Cextract_da&returnGeometry=false&f=json>
+- <https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=gid%3C11229500&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json>
+- <https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=gid%3E%3D11229500+AND+gid%3C11232900&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json>
+- <https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=gid%3E%3D11232900&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json>
 
 - **Licence / terms:** Creative Commons Attribution 4.0 (WA SLIP public services); see https://catalogue.data.wa.gov.au/dataset/minedex
 - **Personal data:** none
@@ -32,7 +32,7 @@ MINEDEX mine sites. The perishable fact is site_stage — Operating, Care and Ma
 
 ### `wa.tenements.live`
 
-**DMIRS Western Australia** (first party) · monthly · active
+**DMIRS Western Australia** (first party) · monthly · paused
 
 Live mining tenements. The perishable fact is the holder: ownership of ground is overwritten in place, so consolidation is invisible after the fact. The companion DEAD layer (DMIRS-026) keeps 422,194 deaths back to 1883 and is therefore cited rather than captured — see docs/what-we-do-not-capture.md.
 
@@ -48,7 +48,7 @@ Live mining tenements. The perishable fact is the holder: ownership of ground is
 - **Licence / terms:** Creative Commons Attribution 4.0 (WA SLIP public services); see https://catalogue.data.wa.gov.au/dataset/mining-tenements-dmirs-003
 - **Personal data:** none
 - **Publisher keeps history:** no — this source destroys its own history
-- **Last stored capture:** 2026-09-03T17:58:32Z · `raw/wa.tenements.live/2026/09/20260903T175832Z-94d3bde2a568.json` · sha256 `94d3bde2a568…`
+- **Last stored capture:** none yet
 
 ## Reusing this data
 

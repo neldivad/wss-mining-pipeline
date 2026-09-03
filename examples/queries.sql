@@ -86,53 +86,9 @@ FROM moves WHERE was IS NOT NULL AND was <> now
 GROUP BY observed_at, commodity
 ORDER BY observed_at DESC, mothballed DESC;
 
--- ---------------------------------------------------------------- ownership
--- Concentration of live ground over time. Rising top-10 share means
--- consolidation; falling means ground is dispersing.
-WITH latest AS (
-  SELECT entity_id, metric, observed_at, value,
-         ROW_NUMBER() OVER (PARTITION BY entity_id, metric, observed_at
-                            ORDER BY captured_at DESC) AS rn
-  FROM observations
-),
-t AS (
-  SELECT observed_at, entity_id,
-         MAX(CASE WHEN metric='holder' THEN value END) AS holder,
-         MAX(CASE WHEN metric='area'   THEN CAST(value AS DOUBLE) END) AS ha
-  FROM latest WHERE rn=1 AND entity_id LIKE 'tenement:%'
-  GROUP BY observed_at, entity_id
-),
-by_holder AS (
-  SELECT observed_at, holder, SUM(ha) AS ha,
-         ROW_NUMBER() OVER (PARTITION BY observed_at ORDER BY SUM(ha) DESC) AS rank
-  FROM t WHERE holder IS NOT NULL AND holder <> 'MINISTERIAL'
-  GROUP BY observed_at, holder
-)
-SELECT observed_at,
-       COUNT(*)                                                AS holders,
-       ROUND(SUM(ha)/1e6, 2)                                   AS million_ha,
-       ROUND(100.0*SUM(CASE WHEN rank<=10 THEN ha ELSE 0 END)/SUM(ha), 1) AS top10_pct
-FROM by_holder GROUP BY observed_at ORDER BY observed_at;
-
--- ---------------------------------------------------------------- ground churn
--- Tenements that changed hands. Ownership is overwritten in place, so a
--- transfer leaves no trace in the registry itself.
-WITH latest AS (
-  SELECT entity_id, metric, observed_at, value,
-         ROW_NUMBER() OVER (PARTITION BY entity_id, metric, observed_at
-                            ORDER BY captured_at DESC) AS rn
-  FROM observations
-),
-h AS (SELECT entity_id, observed_at, value AS holder FROM latest WHERE rn=1 AND metric='holder'),
-moves AS (
-  SELECT entity_id, observed_at, holder AS now,
-         LAG(holder) OVER (PARTITION BY entity_id ORDER BY observed_at) AS was
-  FROM h
-)
-SELECT observed_at, was, now, COUNT(*) AS tenements
-FROM moves WHERE was IS NOT NULL AND was <> now
-GROUP BY observed_at, was, now
-ORDER BY tenements DESC LIMIT 40;
+-- Ownership queries (concentration, ground churn) lived here and were removed:
+-- wa.tenements.live is paused on a personal-data decision. See
+-- docs/ownership-is-blocked.md — the queries come back with the source.
 
 -- ---------------------------------------------------------------- cadence check
 -- Does the registry change often enough to justify the cadence? If most

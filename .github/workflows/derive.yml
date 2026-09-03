@@ -11,7 +11,7 @@ name: derive
 
 on:
   schedule:
-    - cron: "20 0 * * *" # after capture + health
+    - cron: "20 0 4 * *" # the day after capture-monthly + health
   workflow_dispatch:
   pull_request:
     paths:
@@ -43,6 +43,8 @@ jobs:
         run: pip install "$ENGINE_SPEC"
       - name: Rebuild derived/ from the raw archive
         run: wss derive
+      - name: Report what moved
+        run: python examples/whats_changed.py --markdown >> "$GITHUB_STEP_SUMMARY"
       - name: Byte-identical or red (pull requests)
         if: github.event_name == 'pull_request'
         run: git diff --exit-code -- derived
