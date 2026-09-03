@@ -20,7 +20,7 @@ concurrency:
 env:
   CADENCE: monthly
   SHARDS: "1" # every source is one WA government host; N shards = N runners hitting it at once
-  ENGINE_SPEC: "wss @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.5.3"
+  ENGINE_SPEC: "wss @ git+https://github.com/${{ github.repository_owner }}/wss-engine.git@v0.5.4"
 
 jobs:
   plan:
