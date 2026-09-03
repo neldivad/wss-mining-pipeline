@@ -1,0 +1,66 @@
+# Field shape verified against the live service on 2026-09-04.
+source_id: wa.tenements.live
+status: paused
+cadence: monthly
+schema_id: mining.v1
+
+publisher: DMIRS Western Australia
+publisher_tier: first_party
+destroys_own_history: true   # current holdings only; the DEAD layer keeps deaths, not ownership over time
+licence: "Creative Commons Attribution 4.0 (WA SLIP public services); see https://catalogue.data.wa.gov.au/dataset/mining-tenements-dmirs-003"
+personal_data: none          # true only while this source stays paused — see below
+
+# PAUSED — blocked on a policy decision, not a technical one.
+#
+# holder1 is the analytical point of this source: ownership of ground is
+# overwritten in place, so consolidation is invisible afterwards. But 1,446 of
+# 3,604 holders (40%) are named individuals in "SURNAME, FORENAME" form,
+# holding 4,280 tenements. WA publishes them because a tenement register is a
+# public record.
+#
+# Two engine contracts collide here: capture stores raw bytes verbatim, and
+# this fleet declares personal_data: none. Pseudonymising in the parser fixes
+# the derived table but not the archive, so it does not resolve the conflict.
+# The entry stays paused to record the decision rather than pretend it was
+# never considered. See docs/ownership-is-blocked.md.
+
+notes: >-
+  Live mining tenements. The perishable fact is the holder: ownership of ground
+  is overwritten in place, so consolidation is invisible after the fact. The
+  companion DEAD layer (DMIRS-026) keeps 422,194 deaths back to 1883 and is
+  therefore cited rather than captured — see docs/what-we-do-not-capture.md.
+storage: git
+
+endpoints:
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/3/query?where=gid%3C7116900&outFields=gid%2Ctenid%2Cholder1%2Choldercnt%2Clegal_area%2Cunit_of_me%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/3/query?where=gid%3E%3D7116900+AND+gid%3C7120700&outFields=gid%2Ctenid%2Cholder1%2Choldercnt%2Clegal_area%2Cunit_of_me%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/3/query?where=gid%3E%3D7120700+AND+gid%3C7124500&outFields=gid%2Ctenid%2Cholder1%2Choldercnt%2Clegal_area%2Cunit_of_me%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/3/query?where=gid%3E%3D7124500+AND+gid%3C7128300&outFields=gid%2Ctenid%2Cholder1%2Choldercnt%2Clegal_area%2Cunit_of_me%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/3/query?where=gid%3E%3D7128300+AND+gid%3C7132100&outFields=gid%2Ctenid%2Cholder1%2Choldercnt%2Clegal_area%2Cunit_of_me%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/3/query?where=gid%3E%3D7132100+AND+gid%3C7135900&outFields=gid%2Ctenid%2Cholder1%2Choldercnt%2Clegal_area%2Cunit_of_me%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/3/query?where=gid%3E%3D7135900+AND+gid%3C7139700&outFields=gid%2Ctenid%2Cholder1%2Choldercnt%2Clegal_area%2Cunit_of_me%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/3/query?where=gid%3E%3D7139700&outFields=gid%2Ctenid%2Cholder1%2Choldercnt%2Clegal_area%2Cunit_of_me%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+
+gates:
+  expect_status: 200
+  min_bytes: 50000
+  content_type_any: [json]
+  must_contain: ["tenid"]
+  must_not_contain: ['exceededTransferLimit":true', "Access Denied"]
+  max_shrink_pct: 40

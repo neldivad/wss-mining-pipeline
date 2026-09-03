@@ -1,0 +1,43 @@
+# Field shape verified against the live service on 2026-09-04 (see docs/pagination.md
+# for why this is split into partitions rather than paged).
+source_id: wa.minedex.sites
+status: active
+cadence: monthly
+schema_id: mining.v1
+
+publisher: DMIRS Western Australia
+publisher_tier: first_party
+destroys_own_history: true   # no timeInfo, no historic-moment support, no dated snapshots
+licence: "Creative Commons Attribution 4.0 (WA SLIP public services); see https://catalogue.data.wa.gov.au/dataset/minedex"
+personal_data: none
+storage: git
+
+notes: >-
+  MINEDEX mine sites. The perishable fact is site_stage — Operating, Care and
+  Maintenance, Proposed, Under Development, Shut, Undeveloped. When a mine is
+  mothballed the previous value is overwritten and nothing records when it moved.
+  Idled capacity restarts in months, so the transition date is the supply signal.
+  target_com carries the commodity, which the tenement layers do not.
+
+endpoints:
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=gid%3C11229500&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=gid%3E%3D11229500+AND+gid%3C11232900&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=gid%3E%3D11232900&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+
+gates:
+  expect_status: 200
+  min_bytes: 50000
+  content_type_any: [json]
+  must_contain: ["site_stage"]
+  # Truncation guard. The service caps a response at 10,000 features and says so
+  # in the payload. Partitions are sized well under that, so this firing means a
+  # partition has outgrown its range and the cuts need re-splitting. Losing rows
+  # silently is the one failure this repo cannot tolerate.
+  must_not_contain: ['exceededTransferLimit":true', "Access Denied"]
+  max_shrink_pct: 40
