@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+<rect x="0.0" y="0.0" width="900.0" height="650.0" fill="#fcfcfb"/>
+<text x="38.0" y="46.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="600" style="">What is running, and what is switched off</text>
+<text x="38.0" y="70.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="13" fill="#52514e" text-anchor="start" font-weight="normal" style="">Western Australian mine fleet by commodity, 2026-09-02. Bar is the idled share of the developed fleet.</text>
+<text x="38.0" y="90.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#898781" text-anchor="start" font-weight="normal" style="">Care and maintenance restarts in months. Proposed capacity arrives in years.</text>
+<text x="250.0" y="124.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="10" fill="#898781" text-anchor="start" font-weight="600" style="">IDLED SHARE</text>
+<text x="636.0" y="124.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="10" fill="#2a78d6" text-anchor="end" font-weight="600" style="">OPERATING</text>
+<text x="706.0" y="124.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="10" fill="#eb6834" text-anchor="end" font-weight="600" style="">IDLE</text>
+<text x="796.0" y="124.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="10" fill="#1baf7a" text-anchor="end" font-weight="600" style="">PIPELINE</text>
+<line x1="250.0" y1="132.0" x2="250.0" y2="578.0" stroke="#e1e0d9" stroke-width="1"/>
+<line x1="400.0" y1="132.0" x2="400.0" y2="578.0" stroke="#e1e0d9" stroke-width="1"/>
+<line x1="550.0" y1="132.0" x2="550.0" y2="578.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="236.0" y="148.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Nickel</text>
+<rect x="250.0" y="137.0" width="293.5" height="15.0" fill="#eb6834"/>
+<text x="550.5" y="148.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#eb6834" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">98%</text>
+<text x="636.0" y="148.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">1</text>
+<text x="706.0" y="148.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">45</text>
+<text x="796.0" y="148.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#1baf7a" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">19</text>
+<text x="236.0" y="174.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Gem &amp; Semi-Precious Stones</text>
+<rect x="250.0" y="163.0" width="262.5" height="15.0" fill="#eb6834"/>
+<text x="519.5" y="174.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#eb6834" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">88%</text>
+<text x="636.0" y="174.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">1</text>
+<text x="706.0" y="174.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">7</text>
+<text x="796.0" y="174.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">1</text>
+<text x="236.0" y="200.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Heavy Mineral Sands</text>
+<rect x="250.0" y="189.0" width="230.8" height="15.0" fill="#eb6834"/>
+<text x="487.8" y="200.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#eb6834" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">77%</text>
+<text x="636.0" y="200.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">3</text>
+<text x="706.0" y="200.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">10</text>
+<text x="796.0" y="200.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#1baf7a" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">5</text>
+<text x="236.0" y="226.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Copper - Lead - Zinc</text>
+<rect x="250.0" y="215.0" width="210.0" height="15.0" fill="#eb6834"/>
+<text x="467.0" y="226.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#eb6834" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">70%</text>
+<text x="636.0" y="226.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">3</text>
+<text x="706.0" y="226.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">7</text>
+<text x="796.0" y="226.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#1baf7a" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">6</text>
+<text x="236.0" y="252.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Tin - Tantalum - Lithium</text>
+<rect x="250.0" y="241.0" width="187.5" height="15.0" fill="#eb6834"/>
+<text x="444.5" y="252.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#eb6834" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">62%</text>
+<text x="636.0" y="252.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">3</text>
+<text x="706.0" y="252.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">5</text>
+<text x="796.0" y="252.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">2</text>
+<text x="236.0" y="278.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Gold</text>
+<rect x="250.0" y="267.0" width="178.1" height="15.0" fill="#eb6834"/>
+<text x="435.1" y="278.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#eb6834" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">59%</text>
+<text x="636.0" y="278.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">169</text>
+<text x="706.0" y="278.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">247</text>
+<text x="796.0" y="278.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#1baf7a" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">171</text>
+<text x="236.0" y="304.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Dimension Stone</text>
+<rect x="250.0" y="293.0" width="160.0" height="15.0" fill="#eb6834"/>
+<text x="417.0" y="304.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#eb6834" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">53%</text>
+<text x="636.0" y="304.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">7</text>
+<text x="706.0" y="304.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">8</text>
+<text x="796.0" y="304.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">4</text>
+<text x="236.0" y="330.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Manganese Ore</text>
+<rect x="250.0" y="319.0" width="150.0" height="15.0" fill="#eb6834"/>
+<text x="407.0" y="330.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#eb6834" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">50%</text>
+<text x="636.0" y="330.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">2</text>
+<text x="706.0" y="330.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">2</text>
+<text x="796.0" y="330.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">3</text>
+<text x="236.0" y="356.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Coal</text>
+<rect x="250.0" y="345.0" width="150.0" height="15.0" fill="#eb6834"/>
+<text x="407.0" y="356.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#eb6834" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">50%</text>
+<text x="636.0" y="356.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">2</text>
+<text x="706.0" y="356.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">2</text>
+<text x="796.0" y="356.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">2</text>
+<text x="236.0" y="382.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Gypsum</text>
+<rect x="250.0" y="371.0" width="125.0" height="15.0" fill="#2a78d6"/>
+<text x="382.0" y="382.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#52514e" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">42%</text>
+<text x="636.0" y="382.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">7</text>
+<text x="706.0" y="382.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">5</text>
+<text x="796.0" y="382.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#1baf7a" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">7</text>
+<text x="236.0" y="408.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Construction Materials</text>
+<rect x="250.0" y="397.0" width="95.9" height="15.0" fill="#2a78d6"/>
+<text x="352.9" y="408.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#52514e" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">32%</text>
+<text x="636.0" y="408.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">83</text>
+<text x="706.0" y="408.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">39</text>
+<text x="796.0" y="408.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#1baf7a" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">13</text>
+<text x="236.0" y="434.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Clays</text>
+<rect x="250.0" y="423.0" width="75.0" height="15.0" fill="#2a78d6"/>
+<text x="332.0" y="434.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#52514e" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">25%</text>
+<text x="636.0" y="434.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">12</text>
+<text x="706.0" y="434.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">4</text>
+<text x="796.0" y="434.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">—</text>
+<text x="236.0" y="460.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Silica - Silica Sand</text>
+<rect x="250.0" y="449.0" width="75.0" height="15.0" fill="#2a78d6"/>
+<text x="332.0" y="460.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#52514e" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">25%</text>
+<text x="636.0" y="460.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">3</text>
+<text x="706.0" y="460.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">1</text>
+<text x="796.0" y="460.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">—</text>
+<text x="236.0" y="486.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Salt</text>
+<rect x="250.0" y="475.0" width="60.0" height="15.0" fill="#2a78d6"/>
+<text x="317.0" y="486.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#52514e" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">20%</text>
+<text x="636.0" y="486.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">4</text>
+<text x="706.0" y="486.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">1</text>
+<text x="796.0" y="486.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">—</text>
+<text x="236.0" y="512.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Bauxite - Alumina</text>
+<rect x="250.0" y="501.0" width="50.0" height="15.0" fill="#2a78d6"/>
+<text x="307.0" y="512.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#52514e" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">17%</text>
+<text x="636.0" y="512.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">5</text>
+<text x="706.0" y="512.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">1</text>
+<text x="796.0" y="512.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">1</text>
+<text x="236.0" y="538.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Limestone - Limesand</text>
+<rect x="250.0" y="527.0" width="48.6" height="15.0" fill="#2a78d6"/>
+<text x="305.6" y="538.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#52514e" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">16%</text>
+<text x="636.0" y="538.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">31</text>
+<text x="706.0" y="538.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">6</text>
+<text x="796.0" y="538.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">4</text>
+<text x="236.0" y="564.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12.5" fill="#0b0b0b" text-anchor="end" font-weight="normal" style="">Iron Ore</text>
+<rect x="250.0" y="553.0" width="42.9" height="15.0" fill="#2a78d6"/>
+<text x="299.9" y="564.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#52514e" text-anchor="start" font-weight="600" style="font-variant-numeric: tabular-nums;">14%</text>
+<text x="636.0" y="564.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">60</text>
+<text x="706.0" y="564.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#52514e" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">10</text>
+<text x="796.0" y="564.5" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="12" fill="#1baf7a" text-anchor="end" font-weight="normal" style="font-variant-numeric: tabular-nums;">20</text>
+<text x="38.0" y="608.0" font-family='system-ui, -apple-system, "Segoe UI", sans-serif' font-size="11.5" fill="#898781" text-anchor="start" font-weight="normal" style="">Every number here is a stock. When it moved, and how fast, is what repeated capture adds.</text>
+</svg>
