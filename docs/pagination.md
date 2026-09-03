@@ -10,19 +10,30 @@ manifest looks healthy, and four fifths of the state quietly vanishes.
 
 ## The shape used here
 
-Each source declares several endpoints, one per **`gid` range**:
+Each source declares several endpoints, one per **`site_code` range**:
 
 ```
-where=gid<7116900
-where=gid>=7116900 AND gid<7120700
+where=site_code<'S0005000'
+where=site_code>='S0005000' AND site_code<'S0010000'
 ...
-where=gid>=7139700
+where=site_code>='S0245000'
 ```
 
-`gid` is dense and sequential in both layers — 10,004 sites across ids
-11226143–11236146, 30,463 tenements across 7113074–7143536 — so a range is a
-predictable slice. Each partition holds roughly 3,800 rows against a 10,000
-cap, leaving about 2.6× headroom.
+Twelve partitions holding roughly 2,000–5,000 rows each against a 10,000 cap,
+so about 2× headroom.
+
+### Why not `gid`
+
+The first version partitioned on `gid`, which looked ideal: dense, sequential,
+10,004 sites across ids 11226143–11236146. It survived one day.
+
+On 3 September 2026 the layer was refreshed from **10,004 rows to 48,414** and
+**every `gid` was reassigned** — site `S0000013` moved from the low range to
+11273060. The open-ended top partition suddenly held 41,657 rows, the server
+truncated it at 10,000, and the gate quarantined the source.
+
+`gid` is a surrogate key that does not survive a rebuild. `site_code` is the
+business identity and does, which is the only property a partition key needs.
 
 Two properties matter:
 

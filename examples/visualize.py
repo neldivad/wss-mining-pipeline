@@ -143,7 +143,7 @@ def chart_fleet_state(snap, as_of):
         p.append(L(x0 + bw * pct / 100, y, x0 + bw * pct / 100, y + 26 * len(rows) + 4, GRID))
     for k, op, cm, pipe in rows:
         idle = cm / (op + cm) * 100
-        p.append(T(x0 - 14, y + 16, k.title()[:26], 12.5, INK, anchor="end"))
+        p.append(T(x0 - 14, y + 16, k.title()[:30], 12.5, INK, anchor="end"))
         p.append(R(x0, y + 5, bw * idle / 100, 15, ORANGE if idle >= 50 else BLUE))
         p.append(T(x0 + bw * idle / 100 + 7, y + 16.5, f"{idle:.0f}%", 11.5,
                    ORANGE if idle >= 50 else INK2, weight="600", tab=True))
@@ -179,7 +179,7 @@ def chart_pipeline_depth(snap, as_of):
     y = 132
     for k, pipe, built, shut in rows:
         ratio = pipe / max(built, 1)
-        p.append(T(x0 - 14, y + 16, k.title()[:26], 12.5, INK, anchor="end"))
+        p.append(T(x0 - 14, y + 16, k.title()[:30], 12.5, INK, anchor="end"))
         p.append(R(x0, y + 5, bw * ratio / mx, 15, AQUA if shut <= 2 else BLUE))
         p.append(T(x0 + bw * ratio / mx + 7, y + 16.5, f"{ratio:.1f}×", 11.5, INK2, weight="600", tab=True))
         for dx, v in ((96, pipe), (186, built), (266, shut)):

@@ -13,7 +13,8 @@ overwritten in place, so consolidation is invisible after the fact:
 - Which companies are accumulating, which are shedding?
 - Do holders shed ground before or after mothballing their mines?
 - At first capture, three of the ten largest holders were nickel companies
-  while nickel ran one operating mine — are they still holding a year later?
+  while 94% of nickel's developed fleet sat idle — are they still holding a
+  year later?
 
 None of that is answerable from a single download, and none of it is
 recoverable later.

@@ -1,5 +1,10 @@
-# Field shape verified against the live service on 2026-09-04 (see docs/pagination.md
-# for why this is split into partitions rather than paged).
+# Field shape verified against the live service on 2026-09-04.
+#
+# Partitioned on site_code, NOT gid. On 2026-09-03 the layer grew from 10,004
+# to 48,414 rows in a single refresh and every gid was reassigned — the
+# truncation gate caught it, but gid had proved to be a surrogate key that does
+# not survive a rebuild. site_code is the stable business identity.
+# See docs/pagination.md.
 source_id: wa.minedex.sites
 status: active
 cadence: monthly
@@ -20,13 +25,40 @@ notes: >-
   target_com carries the commodity, which the tenement layers do not.
 
 endpoints:
-  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=gid%3C11229500&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=site_code%3C%27S0005000%27&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
     delay_seconds: 3
     timeout_seconds: 90
-  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=gid%3E%3D11229500+AND+gid%3C11232900&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=site_code%3E%3D%27S0005000%27+AND+site_code%3C%27S0010000%27&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
     delay_seconds: 3
     timeout_seconds: 90
-  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=gid%3E%3D11232900&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=site_code%3E%3D%27S0010000%27+AND+site_code%3C%27S0015000%27&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=site_code%3E%3D%27S0015000%27+AND+site_code%3C%27S0020000%27&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=site_code%3E%3D%27S0020000%27+AND+site_code%3C%27S0025000%27&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=site_code%3E%3D%27S0025000%27+AND+site_code%3C%27S0030000%27&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=site_code%3E%3D%27S0030000%27+AND+site_code%3C%27S0035000%27&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=site_code%3E%3D%27S0035000%27+AND+site_code%3C%27S0230000%27&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=site_code%3E%3D%27S0230000%27+AND+site_code%3C%27S0235000%27&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=site_code%3E%3D%27S0235000%27+AND+site_code%3C%27S0240000%27&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=site_code%3E%3D%27S0240000%27+AND+site_code%3C%27S0245000%27&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
+    delay_seconds: 3
+    timeout_seconds: 90
+  - url: "https://public-services.slip.wa.gov.au/public/rest/services/SLIP_Public_Services/Industry_and_Mining/MapServer/0/query?where=site_code%3E%3D%27S0245000%27&outFields=gid%2Csite_code%2Csite_stage%2Ctarget_com%2Csite_type_%2Clatitude%2Clongitude%2Cextract_da&returnGeometry=false&f=json"
     delay_seconds: 3
     timeout_seconds: 90
 

@@ -42,6 +42,12 @@ seconds apart: **all HTTP 200, median 1.13s, max 1.52s**, and one identical
 payload size throughout — so byte-stable when nothing changes, which is what
 makes change detection meaningful.
 
+**But it is not stable in content.** Hours after the first capture the layer
+was rebuilt from 10,004 rows to 48,414, with every `gid` reassigned and no
+announcement. Treat schema and key stability as something to verify each run,
+not to assume — that is exactly what the truncation gate is for, and it is why
+partitions key on `site_code` rather than a surrogate id.
+
 One caveat that shaped the registry: a separate probe returned in **29.2s**,
 against the engine's 30s default. The tail is rare but real, so every endpoint
 sets `timeout_seconds: 90`.
@@ -93,8 +99,8 @@ Verified against the first capture, through the shipped sqlite loader:
 
 ```
 commodity | operating | idle | pipeline
-NICKEL    |         1 |   45 |       19
-GOLD      |       169 |  247 |      171
+NICKEL    |         8 |  117 |       81
+GOLD      |       538 |  568 |      725
 ```
 
 The transition and supply-response queries execute and correctly return no

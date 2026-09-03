@@ -17,10 +17,17 @@
   <sub>fleet: <a href="https://github.com/neldivad/wss-engine">engine</a> · <a href="https://github.com/neldivad/wss-hugging-face">hugging face</a> · <a href="https://github.com/neldivad/wss-openrouter">openrouter</a> · <a href="https://github.com/neldivad/wss-cloud-footprint">cloud footprint</a> · <strong>mining</strong></sub>
 </p>
 
-Western Australia publishes the current state of **10,004 mine sites**. The
+Western Australia publishes the current state of **48,414 mine sites**. The
 service has no `timeInfo`, no historic-moment support and no dated snapshots —
 when a mine moves from *Operating* to *Care and Maintenance*, the old value is
 overwritten and nothing records when it happened.
+
+**The first two captures already proved the point.** On 3 September 2026 the
+layer went from 10,004 rows to 48,414 in a single refresh, and every `gid` was
+reassigned. Nobody announced it, and the earlier state is now unobtainable from
+the service — except that this archive holds it. The truncation gate caught the
+change by failing the capture loudly rather than silently keeping a fifth of
+the data; see [pagination](docs/pagination.md).
 
 That date is the whole point. Idled capacity restarts in months, so knowing
 **when** a commodity's fleet went dark, and how fast, is a supply signal no
@@ -30,13 +37,16 @@ single download can give you.
 
 ![What is running, and what is switched off](examples/charts/fleet-state.svg)
 
-Nickel runs **one** mine against 45 mothballed. Even gold, at 169 operating,
-has 247 idled. Across the state: 400 operating, 406 mothballed.
+Nickel runs **8** mines against 117 mothballed — 94% of its developed fleet is
+switched off. Even gold, at 538 operating, has 568 idled. Across the state:
+**2,077 operating against 1,169 in care and maintenance**, and 18,721 shut
+for good.
 
 ![Which commodities are proposing rather than producing](examples/charts/pipeline-depth.svg)
 
-Uranium, vanadium-titanium and rare earths have almost no shut mines at all —
-they are arriving, not recovering.
+Chromite-platinoids and industrial pegmatite minerals have **no operating
+mines at all** — every developed site is idle. Rare earths run 2 against 20
+proposed, the strongest forward pipeline relative to what exists.
 
 ## What it cannot show yet
 
